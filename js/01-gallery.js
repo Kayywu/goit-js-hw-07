@@ -22,10 +22,6 @@ galleryItems.forEach((item) => {
     gallery.append(link)
 });
 
-   let instance = basicLightbox.create(
-	'<img src="" alt=""'>
-);
-
 const openModal = (event) => {
     if (event.target.nodeName !== "IMG") {
         return;
@@ -33,8 +29,8 @@ const openModal = (event) => {
     event.preventDefault();
 
     const instance = basicLightbox.create(
-        '<img src=${event.target.getAttribute("data-source")}
-        alt=${event.target.getAttribute("alt")}>')
+        `<img src=${event.target.getAttribute("data-source")}
+        alt=${event.target.getAttribute("alt")}`)
 
         instance.show();
     
